@@ -11,9 +11,7 @@ stage('build docker'){
 sh 'docker build -t arahman009/dockerj . '
 }
 stage ('push docke image') {
-withCredentials([string(credentialsId:'dockerde',variable:'dockerhubpwd')]) {
 sh 'docker login -u arahman009 -p Idia123456'
-}
 sh 'docker push arahman009/dockerj:latest'
 }
 stage('run container on docker engin') {
