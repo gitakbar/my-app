@@ -3,7 +3,7 @@ stage ('gitfetch') {
 git  url:'https://github.com/gitakbar/my-app.git'
 }
 stage('mvn package'){
-def mvnhome=tool name :'mymvn', type:'maven'
+def mvnhome=tool name :'mymaven', type:'maven'
 def mvncmd="${mvnhome}/bin/mvn"
 sh "${mvncmd} clean package"
 }
