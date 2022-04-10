@@ -19,4 +19,3 @@ def dockerrun='docker run --p 8080:8080 -d --name my-app arahman009/dockerj:late
 sh -o StrictHostKeyChecking=no ec2-user@172.31.28.124 docker run --p 8080:8080 -d --name my-app arahman009/dockerj:latest'
 }
 }
-}
