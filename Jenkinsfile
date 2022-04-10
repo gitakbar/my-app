@@ -12,7 +12,7 @@ sh 'docker build -t arahman009/dockerj . '
 }
 stage ('push docke image') {
 withCredentials([string(credentialsId:'dockerhub',variable:'dockerhubpwd')]) {
-sh "docker login -u akbarhubuser -p ${dockrhubpwd}"
+sh "docker login -u arahman009 -p ${dockerhubpwd}"
 }
 sh 'docker push arahman009/dockerj:latest'
 }
