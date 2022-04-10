@@ -16,7 +16,7 @@ sh 'docker push arahman009/dockerj:latest'
 }
 stage('run container on docker engin') {
 def dockerrun='docker run --p 8080:8080 -d --name my-app arahman009/dockerj:latest'
-sh cd /var/lib/jenkins/workspace/dockerdeploy-de
+sh 'cd /var/lib/jenkins/workspace/dockerdeploy-de'
   sh  'ssh -t -i "ansible-kp.pem" ec2-user@172.31.28.124'
 sh 'docker run --p 8080:8080 -d --name my-app arahman009/dockerj:latest'
 }
