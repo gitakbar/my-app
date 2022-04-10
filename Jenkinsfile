@@ -18,7 +18,7 @@ sh 'docker push arahman009/dockerj:latest'
 }
 stage('run container on docker engin') {
 def dockerrun='docker run -p 8080:8080 -d -name my-app arahman009/dockerj:latest'
-sshagent(['dev-server]) {
+sshagent(['dev-server']) {
 sh "ssh -o StrictHostKeyChecking=no ec2-user@172.31.28.124 ${dockerrun}"
 }
 }
